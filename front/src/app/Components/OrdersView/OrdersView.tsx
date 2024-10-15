@@ -28,7 +28,7 @@ export const OrdersView = () => {
         if (userData?.user?.name) {
             userData?.user.name === undefined ? router.push("/login") : fetchData();
         }
-    }, [userData?.user]);
+    }, [userData?.user, router, fetchData]);
 
     return (
         <div className="w-screen flex flex-col bg-white">
@@ -41,12 +41,12 @@ export const OrdersView = () => {
                         {
                             orders && orders.length > 0 ? (
                                 orders.map((order) => (
-                                    <div className="w-full flex flex-col justify-center items-center content-center">
-                                        <div className="md:w-3/4 flex flex-col md:flex-row p-2 gap-2 justify-evenly mt-4 border-gray-200 rounded-3xl shadow-sm md:shadow-xl border-2" key={order.id}>
+                                    <div className="w-full flex flex-col justify-center items-center content-center" key={order.id}> {/* Key agregada aquí */}
+                                        <div className="md:w-3/4 flex flex-col md:flex-row p-2 gap-2 justify-evenly mt-4 border-gray-200 rounded-3xl shadow-sm md:shadow-xl border-2">
                                             <div className=" mt-0 flex flex-col justify-evenly min-h-full items-center p-2">
                                                 <h2 className="text-xl md:text-xl">Products you bought:</h2>
                                                 {order.products.map((product) => (
-                                                    <ul className="flex flex-col w-full mt-1" key={product.id}>
+                                                    <ul className="flex flex-col w-full mt-1" key={product.id}> {/* Key agregada aquí */}
                                                         <li className="text-base text-center md:text-lg">{product.name}</li>
                                                     </ul>
                                                 ))}
@@ -66,6 +66,7 @@ export const OrdersView = () => {
                                 </div>
                             )
                         }
+
                     </div>
                 </div>
             </div>
