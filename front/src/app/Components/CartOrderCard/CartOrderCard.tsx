@@ -17,8 +17,8 @@ export const CartOrderCard = ({name, price,image, onDelete} : {name:string , pri
     };
     
     return (
-        <div className="w-full flex flex-col min-h-[250px] justify-evenly items-center">
-            <div className="md:w-1/2 shadow-md md:shadow-xl flex flex-col md:flex-row justify-evenly items-center p-3 border-gray-200 border-2 rounded-3xl">
+        <div className="w-3/4 max-w-3/4 flex flex-col min-h-[250px] justify-evenly items-center">
+            <div className="md:w-[700px] shadow-md md:shadow-xl flex flex-col md:flex-row justify-evenly items-center p-3 border-gray-200 border-2 rounded-3xl">
                 <div className="w-3/4 flex md:flex-col justify-between items-center  p-1">
                     <h2 className="md:items-center justify-center  content-center">{name}</h2>
                     <img
