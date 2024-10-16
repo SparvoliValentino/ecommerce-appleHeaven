@@ -58,6 +58,7 @@ export const CartView = () => {
                     <div className="border-b-4 border-gray-400 w-full mb-6">
                         <h2 className="text-[50px] text-center">Your cart</h2>
                     </div>
+                    <div>
                     {
                         cart && cart.length > 0 ? (
                             cart.map((product) => (
@@ -79,6 +80,8 @@ export const CartView = () => {
                             </div>
                         )
                     }
+
+                    </div>
                 </div>
                 <div className="w-full h-auto flex justify-center p-5 mt-auto">
                     <button
