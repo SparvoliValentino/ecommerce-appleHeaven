@@ -3,7 +3,7 @@ import IProduct from "../interfaces/IProducts";
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 export const fetchingProducts = async (): Promise<IProduct[]> => {
     try {
-        const response = await fetch(`${API_URL}/products`,{
+        const response = await fetch(`${API_URL}products`,{
             next: {revalidate:1200}
         });
         const products = response.json()

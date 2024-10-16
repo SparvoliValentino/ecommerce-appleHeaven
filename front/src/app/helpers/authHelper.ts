@@ -8,7 +8,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const login = async (userInfo: ILoginProps) => {
     try {
-        const response = await fetch(`${API_URL}/users/login`, {
+        const response = await fetch(`${API_URL}users/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -45,7 +45,7 @@ export const login = async (userInfo: ILoginProps) => {
 
 export const register = async (userInfo: IRegisterProps)=>{
     try {
-        const response = await fetch(`${API_URL}/users/register`, {
+        const response = await fetch(`${API_URL}users/register`, {
             method:"POST",
             headers: {
                 "Content-Type":"application/json"

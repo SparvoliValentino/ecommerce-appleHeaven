@@ -4,7 +4,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const createOrder = async (products: number[], token:string, userId:number)=> {
     try {
-        const response = await fetch(`${API_URL}/orders`, {
+        const response = await fetch(`${API_URL}orders`, {
             method:"POST",
             headers: {
                 "Content-Type":"application/json",
@@ -29,7 +29,7 @@ export const createOrder = async (products: number[], token:string, userId:numbe
 
 export const getOrders = async (token:string)=> {
     try {
-        const response = await fetch(`${API_URL}/users/orders`, {
+        const response = await fetch(`${API_URL}users/orders`, {
             method:"GET",
             headers: {
                 Authorization:token
